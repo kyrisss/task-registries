@@ -1,0 +1,52 @@
+@import '../../../../styles/colors.scss';
+
+.main__header {
+
+    background-color: $background;
+
+    .header__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .header__img {
+            max-width: 502px;
+            max-height: 502px;
+        }
+
+        .header__info {
+            padding: 30px 0;
+            max-width: 450px;
+
+            .header__description {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 150%;
+                color: $text-1;
+                margin-top: 20px;
+
+                span {
+                    color: $main-blue;
+                }
+            }
+
+            .search {
+                margin-top: 40px;
+                box-shadow: 0px 8px 40px rgba(130, 130, 141, 0.08);
+
+
+                &__input {
+                    max-width: 330px;
+                    padding: 18.5px 0 18.5px 49px;
+                    background-color: $main-white;
+                    border-radius: 5px 0px 0px 5px;
+                }
+
+                &__img {
+                    transform: translate(17.5px, -50%);
+                }
+            }
+        }
+    }
+
+}

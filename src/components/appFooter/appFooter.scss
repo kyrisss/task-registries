@@ -1,0 +1,104 @@
+@import '../../styles/colors.scss';
+
+.footer {
+    padding: 80px 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: $main-grey;
+
+    
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        
+        .info__section {
+            display: flex;
+            flex-direction: column;
+        }
+        .description {
+            line-height: 150%;
+            color: $text-1;
+            margin-bottom: 40px;
+            max-width: 260px;
+        }
+
+        .about {
+            max-width: 361px;
+
+            .logo__img {
+                fill: $main-blue;
+                width: 170px;
+                height: 40px;
+                margin-bottom: 20px;
+            }
+
+            &__title {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 22px;
+                margin-bottom: 10px;
+            }
+
+            &__name{
+                color: $text-1;
+                margin-bottom: 5px;
+            }
+
+            &__address{
+                color: $text-2;
+            }
+        }
+
+        .navigation{
+            .nav{
+                list-style: none;
+
+                &__item{
+                    margin-bottom: 10px;
+
+                    a{
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        .support{
+
+            &__description{
+                margin-bottom: 0;
+                padding-bottom: 10px;
+                border-bottom: 1px solid $line;
+            }
+            &__contact{
+                margin-top: 10px;
+                text-decoration: none;
+                color: $main-grey;
+            }
+        }
+
+        .contacts{
+
+            &__contact{
+                margin-bottom: 10px;
+                text-decoration: none;
+                color: $main-grey;
+            }
+            &__link{
+                color: $main-blue
+            }
+        }
+    }
+
+
+
+    &__copyright {
+        text-align: center;
+        color: $add-grey;
+        padding-top: 20px;
+        border-top: 1px solid $line;
+    }
+
+}

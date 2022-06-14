@@ -1,0 +1,73 @@
+@import '../../styles/colors.scss';
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .icon {
+        width: 48px;
+        height: 48px;
+        background-color: $search;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+
+        &:hover {
+            .icon__img{
+                fill: $main-blue;
+            }
+        }
+
+        &__img {
+            width: 25px;
+            height: 25px;
+            fill: $main-grey;
+        }
+
+        &__notifications {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: $main-blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $main-white;
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 16px;
+        }
+    }
+
+    .line {
+        width: 2px;
+        height: 100%;
+        background-color: $search;
+    }
+
+    &__name {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+        color: $main-grey;
+        margin-left: -10px;
+    }
+
+    .property{
+        width: 14px;
+        height: 8px;
+        object-fit: cover;
+
+        &__img{
+            width: 14px;
+            height: 8px;
+        }
+    }
+}
