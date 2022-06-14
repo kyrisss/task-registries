@@ -1,31 +1,50 @@
-@import '../../style/variables.scss';
+@import '../../styles/colors.scss';
 
-.app {
-    &__header {
-        display: flex;
-        justify-content: space-between;
+.header {
+    display: flex;
+    gap: 30px;
+    padding: 16px 0;
+
+    .logo__img {
+        fill: $main-blue;
+        width: 170px;
+        height: 40px;
     }
-    &__title {
-        font-weight: bold;
-        font-size: 28px;
-        line-height: 37px;
-        span {
-            color: $main-color;
+
+}
+
+.search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 1 1;
+
+
+    &__input {
+        max-width: 270px;
+        width: 100%;
+        background-color: $search;
+        border: none;
+        outline-color: $main-blue;
+        padding: 14.5px 0 14.5px 39px;
+        color: $add-grey;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19px;
+
+        &::placeholder {
+            color: $add-grey;
         }
     }
-    &__menu {
-        ul {
-            display: flex;
-            justify-content: space-between;
-            font-weight: bold;
-            font-size: 24px;
-            line-height: 32px;
-            li {
-                margin: 0 8px;
-                a:hover {
-                    color: $main-color;
-                }
-            }
-        }
+
+    &__img {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(12.5px, -50%);
+        width: 17.5px;
+        height: 17.5px;
+        fill: $add-grey;
+
     }
 }
