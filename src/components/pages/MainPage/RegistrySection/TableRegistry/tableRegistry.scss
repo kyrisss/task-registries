@@ -1,0 +1,52 @@
+@import '../../../../../styles/colors.scss';
+
+.table> :not(:first-child) {
+    border-top: none;
+    padding: 0;
+}
+
+.table {
+    border-top: 1px solid $line;
+    margin-bottom: 40px;
+}
+
+.th {
+    font-weight: 500;
+    color: $main-blue;
+    padding: 20px 30px;
+    vertical-align: middle;
+    position: relative;
+}
+
+.th:nth-child(1),
+.th:nth-child(2),
+.td:nth-child(1),
+.td:nth-child(2) {
+    padding-left: 34px;
+    cursor: pointer;
+}
+
+.th:last-child,
+.td:last-child {
+    padding-right: 0;
+}
+
+.td {
+    padding: 20px 30px;
+    vertical-align: middle;
+    a{
+        color: $main-blue;
+    }
+}
+
+
+.sort__icon {
+    width: 24px;
+    height: 24px;
+    transform: rotate(90deg) translateX(-50%);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    cursor: pointer;
+}
+

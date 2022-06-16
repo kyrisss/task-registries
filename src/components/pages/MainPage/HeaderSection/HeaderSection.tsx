@@ -1,8 +1,18 @@
 import './headerSection.scss';
 import img from '../../../../assets/office.png'
 import sprite from '../../../../assets/sprite.svg'
+import { useDispatch } from 'react-redux';
+import { AppDispatch } from '../../../../redux/store';
+import { setSearch } from '../../../../redux/registrySlice';
 
 const HeaderSection = () => {
+
+    const dispatch = useDispatch<AppDispatch>()
+
+    const inputHandler = (e:any) =>{
+        dispatch(setSearch(e.target.value))
+    }
+
     return (
         <section className="main__header section">
             <div className="wrapper">
@@ -15,7 +25,7 @@ const HeaderSection = () => {
                             <svg className="search__img">
                                 <use xlinkHref={`${sprite}#search`} />
                             </svg>
-                            <input type="text" className='search__input' placeholder='Искать реестр...' />
+                            <input type="text" className='search__input' placeholder='Искать реестр...' onChange={inputHandler}/>
                             <button className="search__button primary-button">Искать</button>
                         </div>
                     </div>

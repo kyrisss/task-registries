@@ -1,0 +1,64 @@
+@import '../../../../styles/colors.scss';
+
+.title__container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    h2 {
+        flex: 1 1;
+    }
+
+    .filter__icon {
+        width: 32px;
+        height: 32px;
+        fill: $text-1;
+        align-self: flex-start;
+    }
+}
+
+
+.paginator {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid $line;
+    border-radius: 5px;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    position: relative;
+    // transform: translateX(50%);
+    margin: 0 auto;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    color: $main-grey;
+}
+.page_active{
+    background-color: $main-blue;
+    color: $main-white;
+}
+
+.next-button{
+    background-image: url(../../../../assets/upper-arrow.svg);
+    background-position: center;
+    transform: rotate(-90deg);
+    a{
+        text-decoration: none;
+    }
+}
+
+.prev-button{
+    background-image: url(../../../../assets/upper-arrow.svg);
+    background-position: center;
+    transform: rotate(90deg);
+    a{
+        text-decoration: none;
+    }
+
+}
