@@ -1,0 +1,81 @@
+@import '../../../../../styles/colors.scss';
+
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 30px;
+    margin-top: 20px;
+
+    .line-margin {
+        margin: 16px 0;
+    }
+
+    .form__item {
+        width: calc(50% - 15px);
+        position: relative;
+
+        .hide-password{
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            right: 20px;
+            top: 40px;
+            cursor: pointer;
+            fill: $text-2;
+
+        }
+
+        label {
+            display: block;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 19px;
+            color: $text-2;
+
+            &.error {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 19px;
+            }
+        }
+
+        input,
+        select {
+            width: 100%;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 19px;
+            color: $main-grey;
+            padding: 18.5px 18px;
+            background-color: $input;
+            border-radius: 5px;
+            border: none;
+            margin: 5px 0;
+            outline-color: $main-blue;
+
+            &.error {
+                border: 1px solid $add-red;
+                &::placeholder{
+                    color: $add-red;
+                }
+            }
+        }
+
+        .error {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 16px;
+            color: $add-red;
+        }
+
+
+    }
+
+    .primary-button {
+        width: 270px;
+        border-radius: 5px;
+    }
+
+
+}

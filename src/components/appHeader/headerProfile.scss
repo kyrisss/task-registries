@@ -58,7 +58,14 @@
         line-height: 22px;
         color: $main-grey;
         margin-left: -10px;
+        text-decoration: none;
+
+        &:hover{
+            color: $main-blue;
+        }
     }
+
+    
 
     .property {
         width: 32px;

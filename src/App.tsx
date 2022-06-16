@@ -5,6 +5,7 @@ import Spinner from './components/Spinner/Spinner';
 import AppHeader from './components/appHeader/AppHeader';
 import AppFooter from './components/appFooter/AppFooter';
 import MainPage from './components/pages/MainPage/MainPage';
+import ProfilePage from './components/pages/ProfilePage/ProfilePage';
 
 function App() {
   return (
@@ -15,8 +16,8 @@ function App() {
                     <Suspense fallback={<Spinner/>}>
                         <Routes>
                             <Route path="/" element={<MainPage />} />
+                            <Route path="/profile" element={<ProfilePage />} />
                             {/* <Route path="/login" element={<Login />} />
-                            <Route path="/personal" element={<Personal />} />
                             <Route path="*" element={<Page404 />} /> */}
                         </Routes>
                     </Suspense>
