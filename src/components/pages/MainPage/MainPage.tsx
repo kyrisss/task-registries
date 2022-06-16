@@ -1,6 +1,7 @@
 import HeaderSection from "./HeaderSection/HeaderSection";
 import NewsSection from "./NewsSection/NewsSection";
 import RegistrySection from "./RegistrySection/RegistrySection";
+import DocumentsSection from './DocumentsSection/DocumentsSection';
 
 
 const MainPage = () => {
@@ -10,7 +11,7 @@ const MainPage = () => {
             <HeaderSection />
             <RegistrySection />
             <NewsSection></NewsSection>
-            <section className="documents section"></section>
+            <DocumentsSection></DocumentsSection>
             <section className="faq section"></section>
 
         </main>

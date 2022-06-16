@@ -1,0 +1,12 @@
+@import '../../../../styles/colors.scss';
+
+.total-docs {
+    font-size: 18px;
+    line-height: 25px;
+    color: $main-grey;
+    margin-bottom: 40px;
+
+    &_number{
+        color: $main-blue;
+    }
+}

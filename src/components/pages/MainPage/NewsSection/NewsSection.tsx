@@ -11,7 +11,7 @@ const NewsSection = () => {
 
     const mapNews = news.map(n => {
         return (
-            <div className="news">
+            <div className="news" key={n.date}>
                 <img className='news__img' src={n.img} alt={n.title} />
                 <p className="news__title">{n.title}</p>
                 <div className="news__date">

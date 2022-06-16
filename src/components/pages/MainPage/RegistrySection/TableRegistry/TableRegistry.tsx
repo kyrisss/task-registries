@@ -39,7 +39,7 @@ const TableRegistry: React.FC<Props> = ({ registry }) => {
 
     return (
         <>
-            <Table hover>
+            <Table hover className='table-registry'>
                 <thead onClick={sortHandler}>
                     <tr>
                         <th className='th' data-sort="id">

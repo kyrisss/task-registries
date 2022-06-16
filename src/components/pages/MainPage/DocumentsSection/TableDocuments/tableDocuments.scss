@@ -1,6 +1,7 @@
 @import '../../../../../styles/colors.scss';
 
-.table-registry {
+
+.table-documents {
 
     &.table> :not(:first-child) {
         border-top: none;
@@ -15,27 +16,29 @@
     .th {
         font-weight: 500;
         color: $main-blue;
-        padding: 20px 30px;
+        padding: 20px 40px;
         vertical-align: middle;
         position: relative;
     }
 
-    .th:nth-child(1),
-    .th:nth-child(2),
-    .td:nth-child(1),
-    .td:nth-child(2) {
-        padding-left: 34px;
-        cursor: pointer;
+    .th:first-child,
+    .td:first-child {
+        padding-left: 0;
+        padding-right: 74px;
     }
 
     .th:last-child,
     .td:last-child {
+        padding-left: 74px;
         padding-right: 0;
+        cursor: pointer;
+        color: $main-blue;
     }
 
     .td {
-        padding: 20px 30px;
+        padding: 20px 40px;
         vertical-align: middle;
+        position: relative;
 
         a {
             color: $main-blue;
@@ -46,10 +49,11 @@
     .sort__icon {
         width: 24px;
         height: 24px;
-        transform: rotate(90deg) translateX(-50%);
+        transform: translate(40px, -50%);
         position: absolute;
         left: 0;
         top: 50%;
         cursor: pointer;
+        fill: $main-blue;
     }
 }
