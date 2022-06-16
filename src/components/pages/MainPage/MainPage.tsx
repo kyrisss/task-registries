@@ -1,4 +1,5 @@
 import HeaderSection from "./HeaderSection/HeaderSection";
+import NewsSection from "./NewsSection/NewsSection";
 import RegistrySection from "./RegistrySection/RegistrySection";
 
 
@@ -8,8 +9,7 @@ const MainPage = () => {
 
             <HeaderSection />
             <RegistrySection />
-            <section className="reestrs section"></section>
-            <section className="news section"></section>
+            <NewsSection></NewsSection>
             <section className="documents section"></section>
             <section className="faq section"></section>
 
