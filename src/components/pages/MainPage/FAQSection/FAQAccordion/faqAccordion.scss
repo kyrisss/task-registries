@@ -2,13 +2,13 @@
 
 
 
-.accordion-item{
-    border:none;
+.accordion-item {
+    border: none;
     background-color: $background;
     margin-bottom: 20px;
 }
 
-.accordion-header{
+.accordion-header {
     font-weight: 700;
     font-size: 18px;
     line-height: 25px;
@@ -17,10 +17,11 @@
     box-shadow: none;
 }
 
-.accordion-button::after{
+.accordion-button::after {
     display: none;
 }
-.accordion-button::before{
+
+.accordion-button::before {
     content: "";
     background-image: url("../../../../../assets/plus.svg");
     width: 32px;
@@ -31,14 +32,24 @@
     left: 0;
     transition: transform 0.2s ease-in-out;
 }
-.accordion-button:not(.collapsed)::before{
+
+.accordion-button:not(.collapsed)::before {
     transform: rotate(45deg);
+}
+
+.accordion-button:not(.collapsed) {
+    color: $main-grey;
+    background-color: $background;
 }
 
 .accordion-button {
     padding: 3.5px 0 3.5px 42px;
     position: relative;
     background-color: $background;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: $main-grey;
 
 }
 
@@ -48,15 +59,15 @@
 }
 
 
-.accordion-body{
+.accordion-body {
     padding: 0 0 0 42px;
     margin: 23.5px 0;
 
-    ol{
-        
+    ol {
+
         padding: 0 0 0 17px;
 
-        li{
+        li {
             margin-bottom: 20px;
         }
     }

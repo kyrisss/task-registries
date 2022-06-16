@@ -6,6 +6,7 @@ import AppHeader from './components/appHeader/AppHeader';
 import AppFooter from './components/appFooter/AppFooter';
 import MainPage from './components/pages/MainPage/MainPage';
 import ProfilePage from './components/pages/ProfilePage/ProfilePage';
+import Page404 from './components/pages/Page404/Page404';
 
 function App() {
   return (
@@ -17,8 +18,8 @@ function App() {
                         <Routes>
                             <Route path="/" element={<MainPage />} />
                             <Route path="/profile" element={<ProfilePage />} />
-                            {/* <Route path="/login" element={<Login />} />
-                            <Route path="*" element={<Page404 />} /> */}
+                            {/* <Route path="/login" element={<Login />} /> */}
+                            <Route path="*" element={<Page404 />} />
                         </Routes>
                     </Suspense>
                 </main>

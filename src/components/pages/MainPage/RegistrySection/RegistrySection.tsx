@@ -7,9 +7,11 @@ import { fetchRegistry, Registry } from '../../../../redux/registrySlice';
 import ReactPaginate from 'react-paginate';
 import TableRegistry from './TableRegistry/TableRegistry';
 import Spinner from '../../../Spinner/Spinner';
+import ErrorPage from '../../../ErrorPage/ErrorPage';
 
 const RegistrySection = () => {
 
+    const error = useSelector((state: RootState) => state.registry.error)
     const sortType = useSelector((state: RootState) => state.registry.sortType)
     const sortKey = useSelector((state: RootState) => state.registry.sortKey)
     const isLoading = useSelector((state: RootState) => state.registry.isLoading)
@@ -43,7 +45,7 @@ const RegistrySection = () => {
         let sortRegistry = [...registry].filter(reg => {
             let key: keyof typeof reg;
             for (key in reg) {
-                if(reg[key].includes(search)){
+                if (reg[key].includes(search)) {
                     return true
                 }
             }
@@ -57,7 +59,8 @@ const RegistrySection = () => {
         return sortRegistry
     }
 
-
+    const spinner = isLoading ? <Spinner></Spinner> : null
+    const errorMessage = error ? <ErrorPage></ErrorPage> : null
 
     return (
         <section className="main__registry section" id='registry'>
@@ -71,24 +74,24 @@ const RegistrySection = () => {
                         <use xlinkHref={`${sprite}#three-dots-vertical`} />
                     </svg>
                 </div>
-                {isLoading ? <Spinner></Spinner> :
-                    <>
-                        <TableRegistry registry={currentItems}></TableRegistry>
-                        <ReactPaginate
-                            breakLabel="..."
-                            nextLabel="&nbsp;&nbsp;&nbsp;"
-                            nextClassName="page next-button"
-                            onPageChange={handlePageClick}
-                            pageRangeDisplayed={3}
-                            pageCount={pageCount}
-                            previousLabel="&nbsp;&nbsp;&nbsp;"
-                            previousClassName="page prev-button"
-                            pageClassName="page"
-                            containerClassName="paginator"
-                            activeClassName="page_active"
-                        />
-                    </>
-                }
+                <>
+                    <TableRegistry registry={currentItems}></TableRegistry>
+                    {spinner}
+                    {errorMessage}
+                    <ReactPaginate
+                        breakLabel="..."
+                        nextLabel="&nbsp;&nbsp;&nbsp;"
+                        nextClassName="page next-button"
+                        onPageChange={handlePageClick}
+                        pageRangeDisplayed={3}
+                        pageCount={pageCount}
+                        previousLabel="&nbsp;&nbsp;&nbsp;"
+                        previousClassName="page prev-button"
+                        pageClassName="page"
+                        containerClassName="paginator"
+                        activeClassName="page_active"
+                    />
+                </>
             </div>
         </section>
     )
