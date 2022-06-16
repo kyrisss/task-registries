@@ -1,0 +1,15 @@
+@import '../../../../styles/colors.scss';
+
+.main__faq{
+    background-color: $background;
+}
+
+.faq-container{
+    display: flex;
+    justify-content: space-between;
+
+    .faq{
+        max-width: 668px;
+        width: 100%;
+    }
+}

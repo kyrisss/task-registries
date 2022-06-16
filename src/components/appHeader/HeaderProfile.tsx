@@ -24,9 +24,6 @@ const HeaderProfile = () => {
             </div>
             <p className="profile__name">Захар Палазник</p>
             <div className="profile__property property">
-                <svg className="property__img">
-                    <use xlinkHref={`${sprite}#upper-arrow`} />
-                </svg>
             </div>
 
         </div>

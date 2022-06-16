@@ -17,7 +17,7 @@
         position: relative;
 
         &:hover {
-            .icon__img{
+            .icon__img {
                 fill: $main-blue;
             }
         }
@@ -60,14 +60,9 @@
         margin-left: -10px;
     }
 
-    .property{
-        width: 14px;
-        height: 8px;
-        object-fit: cover;
-
-        &__img{
-            width: 14px;
-            height: 8px;
-        }
+    .property {
+        width: 32px;
+        height: 32px;
+        background-image: url('./../../assets/upper-arrow.svg');
     }
 }

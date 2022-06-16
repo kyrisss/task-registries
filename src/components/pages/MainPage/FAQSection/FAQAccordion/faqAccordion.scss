@@ -1,0 +1,63 @@
+@import '../../../../../styles/colors.scss';
+
+
+
+.accordion-item{
+    border:none;
+    background-color: $background;
+    margin-bottom: 20px;
+}
+
+.accordion-header{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: $main-grey;
+    background-color: $background;
+    box-shadow: none;
+}
+
+.accordion-button::after{
+    display: none;
+}
+.accordion-button::before{
+    content: "";
+    background-image: url("../../../../../assets/plus.svg");
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 0;
+    transition: transform 0.2s ease-in-out;
+}
+.accordion-button:not(.collapsed)::before{
+    transform: rotate(45deg);
+}
+
+.accordion-button {
+    padding: 3.5px 0 3.5px 42px;
+    position: relative;
+    background-color: $background;
+
+}
+
+.accordion-button:focus {
+    border-color: $background;
+    box-shadow: none;
+}
+
+
+.accordion-body{
+    padding: 0 0 0 42px;
+    margin: 23.5px 0;
+
+    ol{
+        
+        padding: 0 0 0 17px;
+
+        li{
+            margin-bottom: 20px;
+        }
+    }
+}
