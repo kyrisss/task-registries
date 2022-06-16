@@ -3,7 +3,7 @@ import './errorPage.scss'
 
 const ErrorPage = () =>{
     return(
-        <div className='error'>
+        <div className='error-img'>
             <img src={error} alt="error" />
         </div>
     )

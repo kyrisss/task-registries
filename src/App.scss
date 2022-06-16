@@ -4,6 +4,7 @@
 .wrapper {
   max-width: 1170px;
   margin: 0 auto;
+  position: relative;
 }
 
 h1 {
@@ -47,6 +48,6 @@ h3 {
   cursor: pointer;
 
   &:hover {
-    transform: scale(1.1);
+    background-color: $hover;
   }
 }

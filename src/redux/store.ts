@@ -4,6 +4,7 @@ import paginatorSlice from './paginatorSlice';
 import newsSlice from './newsSlice';
 import documentsSlice from './documentsSlice';
 import profileSlice from './profileSlice';
+import loginSlice from './loginSlice';
 
 export const store = configureStore({
     reducer: {
@@ -12,6 +13,7 @@ export const store = configureStore({
         news: newsSlice,
         documents: documentsSlice,
         profile: profileSlice,
+        login: loginSlice,
     },
   })
   

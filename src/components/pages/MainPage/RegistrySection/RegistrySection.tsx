@@ -10,17 +10,21 @@ import Spinner from '../../../Spinner/Spinner';
 import ErrorPage from '../../../ErrorPage/ErrorPage';
 
 const RegistrySection = () => {
+    
+
+    useEffect(() => {
+        dispatch(fetchRegistry())
+    }, []);
 
     const error = useSelector((state: RootState) => state.registry.error)
     const sortType = useSelector((state: RootState) => state.registry.sortType)
     const sortKey = useSelector((state: RootState) => state.registry.sortKey)
     const isLoading = useSelector((state: RootState) => state.registry.isLoading)
     const search = useSelector((state: RootState) => state.registry.search)
-    const dispatch = useDispatch<AppDispatch>()
-
-    let registry: Registry[] = []
-    registry = useSelector((state: RootState) => state.registry.registry)
+    const registry = useSelector((state: RootState) => state.registry.registry)
     const itemsPerPage = useSelector((state: RootState) => state.paginator.itemsPerPage)
+    const dispatch = useDispatch<AppDispatch>()
+    
 
     const [currentItems, setCurrentItems] = useState<Registry[]>([]);
     const [itemOffset, setItemOffset] = useState(0);
@@ -28,13 +32,10 @@ const RegistrySection = () => {
 
     useEffect(() => {
         const endOffset = itemOffset + itemsPerPage;
-        setCurrentItems(sortRegistry().slice(itemOffset, endOffset));
-        setPageCount(Math.ceil(sortRegistry().length / itemsPerPage));
-    }, [itemOffset, itemsPerPage, registry, sortType, search]);
-
-    useEffect(() => {
-        dispatch(fetchRegistry())
-    }, []);
+        const visibleRegistry = sortRegistry()
+        setCurrentItems(visibleRegistry.slice(itemOffset, endOffset));
+        setPageCount(Math.ceil(visibleRegistry.length / itemsPerPage));
+    }, [itemOffset, registry, sortType, search]);
 
     const handlePageClick = (event: any) => {
         const newOffset = (event.selected * itemsPerPage) % registry.length;

@@ -63,23 +63,12 @@ export const newsSlice = createSlice({
     name: 'news',
     initialState,
     reducers: {
-        // setTotalCount: (state, action: PayloadAction<number>) => {
-        //     state.totalCount = action.payload
-        // }
-        // // increment: (state) => {
-        // //   state.value += 1
-        // // },
-        // // decrement: (state) => {
-        // //   state.value -= 1
-        // // },
-        // // fetching: (state, action: PayloadAction<number>) => {
-        // //   state.value += action.payload
-        // // },
+        addNews: (state) => {
+            state.news = [...state.news, ...state.news]
+          }
     },
 })
 
-// Action creators are generated for each case reducer function
-// export const { increment, decrement, incrementByAmount } = registrySlice.actions
-export const {} = newsSlice.actions
+export const {addNews} = newsSlice.actions
 
 export default newsSlice.reducer

@@ -5,10 +5,23 @@ import Nav from 'react-bootstrap/Nav';
 import Row from 'react-bootstrap/Row';
 import Tab from 'react-bootstrap/Tab';
 import ProfileSettings from './../ProfileSettings/ProfileSettings';
+import { useDispatch } from 'react-redux';
+import { AppDispatch } from '../../../../redux/store';
+import { setLogin } from '../../../../redux/loginSlice';
+import { useNavigate } from 'react-router-dom';
 
 
 
 const TabContainer = () => {
+
+    const dispatch = useDispatch<AppDispatch>()
+    const navigate = useNavigate()
+
+    const logout = () => {
+        dispatch(setLogin(false))
+        navigate("/")
+    }
+    
     return (
         <div className="tab-container">
             <Tab.Container id="left-tabs-example" defaultActiveKey="first">
@@ -57,7 +70,7 @@ const TabContainer = () => {
                                 </svg>
                                 Мои загрузки</Nav.Link>
                             </Nav.Item>
-                            <Nav.Item>
+                            <Nav.Item onClick={logout}>
                                 <Nav.Link eventKey="seventh">
                                 <svg className='profile-icon'>
                                     <use xlinkHref={`${sprite}#logout`} />

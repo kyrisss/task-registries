@@ -1,4 +1,4 @@
-@import '../../styles/colors.scss';
+@import '../../../styles/colors.scss';
 
 .profile {
     display: flex;
@@ -70,6 +70,6 @@
     .property {
         width: 32px;
         height: 32px;
-        background-image: url('./../../assets/upper-arrow.svg');
+        background-image: url('./../../../assets/upper-arrow.svg');
     }
 }

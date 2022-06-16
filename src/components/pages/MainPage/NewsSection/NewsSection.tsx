@@ -1,13 +1,19 @@
 import './newsSection.scss';
 
 import sprite from '../../../../assets/sprite.svg'
-import { useSelector } from 'react-redux';
-import { RootState } from '../../../../redux/store';
+import { useDispatch, useSelector } from 'react-redux';
+import { AppDispatch, RootState } from '../../../../redux/store';
+import { addNews } from '../../../../redux/newsSlice';
 
 
 const NewsSection = () => {
 
     const news = useSelector((state: RootState) => state.news.news)
+    const dispatch = useDispatch<AppDispatch>()
+
+    const nextHandler = () => {
+        dispatch(addNews())
+    }
 
     const mapNews = news.map(n => {
         return (
@@ -31,7 +37,7 @@ const NewsSection = () => {
                 <div className='news__container'>
                     {mapNews}
                 </div>
-                <button className="primary-button">Показать все</button>
+                <button className="primary-button" onClick={nextHandler}>Показать все</button>
             </div>
         </section>
     )

@@ -1,9 +1,16 @@
 import { Link, NavLink } from 'react-router-dom';
 import './appHeader.scss';
 import sprite from '../../assets/sprite.svg';
-import HeaderProfile from './HeaderProfile';
+import HeaderProfile from './HeaderProfile/HeaderProfile';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../redux/store';
+import HeaderLogout from './HeaderLogout/HeaderLogout';
+
 
 const AppHeader = () => {
+
+    const isLogin = useSelector((state: RootState) => state.login.login)
+
     return (
         <header className="app__header">
             <div className="wrapper">
@@ -21,7 +28,7 @@ const AppHeader = () => {
                         </svg>
                         <input type="text" className='search__input' placeholder='Поиск' />
                     </div>
-                    <HeaderProfile />
+                    {isLogin ? <HeaderProfile /> : <HeaderLogout/>}
                 </div>
             </div>
         </header>

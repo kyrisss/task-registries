@@ -39,6 +39,11 @@
     width: 40px;
     height: 40px;
     color: $main-grey;
+
+    &:hover{
+        background-color: $hover;
+        color: $main-white;
+    }
 }
 .page_active{
     background-color: $main-blue;
@@ -49,6 +54,7 @@
     background-image: url(../../../../assets/upper-arrow.svg);
     background-position: center;
     transform: rotate(-90deg);
+    margin-left: 10px;
     a{
         text-decoration: none;
     }
@@ -58,6 +64,7 @@
     background-image: url(../../../../assets/upper-arrow.svg);
     background-position: center;
     transform: rotate(90deg);
+    margin-right: 10px;
     a{
         text-decoration: none;
     }
