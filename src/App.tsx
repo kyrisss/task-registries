@@ -6,8 +6,8 @@ import AppHeader from './components/appHeader/AppHeader';
 import AppFooter from './components/appFooter/AppFooter';
 import MainPage from './components/pages/MainPage/MainPage';
 import ProfilePage from './components/pages/ProfilePage/ProfilePage';
-import Page404 from './components/pages/Page404/Page404';
 import LoginPage from './components/pages/LoginPage/LoginPage';
+const Page404 = lazy(() => import('./components/pages/Page404/Page404'))
 
 function App() {
   return (

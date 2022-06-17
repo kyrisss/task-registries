@@ -16,12 +16,7 @@ const RegistrySection = () => {
         dispatch(fetchRegistry())
     }, []);
 
-    const error = useSelector((state: RootState) => state.registry.error)
-    const sortType = useSelector((state: RootState) => state.registry.sortType)
-    const sortKey = useSelector((state: RootState) => state.registry.sortKey)
-    const isLoading = useSelector((state: RootState) => state.registry.isLoading)
-    const search = useSelector((state: RootState) => state.registry.search)
-    const registry = useSelector((state: RootState) => state.registry.registry)
+    const {sortType, sortKey, isLoading, search, registry, error} = useSelector((state: RootState) => state.registry)
     const itemsPerPage = useSelector((state: RootState) => state.paginator.itemsPerPage)
     const dispatch = useDispatch<AppDispatch>()
     
