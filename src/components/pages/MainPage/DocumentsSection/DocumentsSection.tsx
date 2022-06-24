@@ -1,5 +1,5 @@
 import './documentsSection.scss';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { RootState } from '../../../../redux/store';
 import TableDocuments from './TableDocuments/TableDocuments';
 

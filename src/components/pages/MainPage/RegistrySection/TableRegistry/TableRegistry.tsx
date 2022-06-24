@@ -15,12 +15,14 @@ const TableRegistry: React.FC<Props> = ({ registry }) => {
     const dispatch = useDispatch<AppDispatch>()
 
     const sortHandler = (e: any) => {
-        if (sortType == "asc") {
-            dispatch(setSortType("dsc"))
-        } else {
-            dispatch(setSortType("asc"))
+        if(e.target.dataset.sort){
+            if (sortType === "asc") {
+                dispatch(setSortType("dsc"))
+            } else {
+                dispatch(setSortType("asc"))
+            }
+            dispatch(setSortKey(e.target.dataset.sort))
         }
-        dispatch(setSortKey(e.target.dataset.sort))
     }
     
     const mapRegistry = registry.map(reg => {

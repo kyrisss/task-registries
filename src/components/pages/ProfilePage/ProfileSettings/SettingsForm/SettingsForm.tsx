@@ -8,13 +8,12 @@ import { AppDispatch, RootState } from '../../../../../redux/store'
 import { setProfile } from '../../../../../redux/profileSlice'
 
 const Form = () => {
-
     const [showPassword, setShowpassword] = useState<Boolean>(false)
     const { firstName, lastName, patronymic, country, city, phone, password} = useSelector((state: RootState) => state.profile)
     const dispatch = useDispatch<AppDispatch>()
 
     const toggleShowPassword = () => {
-        if (showPassword == false) {
+        if (showPassword === false) {
             setShowpassword(true)
         } else {
             setShowpassword(false)
