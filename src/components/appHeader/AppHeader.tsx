@@ -1,9 +1,9 @@
 import { Link, NavLink } from 'react-router-dom';
 import './appHeader.scss';
-import sprite from '../../assets/sprite.svg';
+import sprite from '@assets/sprite.svg';
 import HeaderProfile from './HeaderProfile/HeaderProfile';
 import { useSelector } from 'react-redux';
-import { RootState } from '../../redux/store';
+import { RootState } from '@redux/store';
 import HeaderLogout from './HeaderLogout/HeaderLogout';
 
 

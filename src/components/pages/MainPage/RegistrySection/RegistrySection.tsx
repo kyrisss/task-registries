@@ -1,13 +1,13 @@
 import './registrySection.scss';
-import sprite from '../../../../assets/sprite.svg';
+import sprite from '@assets/sprite.svg';
 import { useSelector, useDispatch } from 'react-redux';
-import { AppDispatch, RootState } from '../../../../redux/store';
+import { AppDispatch, RootState } from '@redux/store';
 import { useEffect, useState } from 'react';
-import { fetchRegistry, Registry } from '../../../../redux/registrySlice';
+import { fetchRegistry, Registry } from '@redux/registrySlice';
 import ReactPaginate from 'react-paginate';
 import TableRegistry from './TableRegistry/TableRegistry';
-import Spinner from '../../../Spinner/Spinner';
-import ErrorPage from '../../../ErrorPage/ErrorPage';
+import Spinner from '@components/Spinner/Spinner';
+import ErrorPage from '@components/ErrorPage/ErrorPage';
 
 const RegistrySection = () => {
     

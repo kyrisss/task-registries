@@ -1,9 +1,9 @@
 import './newsSection.scss';
 
-import sprite from '../../../../assets/sprite.svg'
+import sprite from '@assets/sprite.svg'
 import { useDispatch, useSelector } from 'react-redux';
-import { AppDispatch, RootState } from '../../../../redux/store';
-import { addNews } from '../../../../redux/newsSlice';
+import { AppDispatch, RootState } from '@redux/store';
+import { addNews } from '@redux/newsSlice';
 
 
 const NewsSection = () => {

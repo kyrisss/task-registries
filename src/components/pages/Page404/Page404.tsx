@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import ErrorPage from '../../ErrorPage/ErrorPage';
+import ErrorPage from '@components/ErrorPage/ErrorPage';
 import './page404.scss'
 
 

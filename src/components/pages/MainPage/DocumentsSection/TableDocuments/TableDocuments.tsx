@@ -1,7 +1,7 @@
 import './tableDocuments.scss';
-import sprite from '../../../../../assets/sprite.svg'
+import sprite from '@assets/sprite.svg'
 import Table from 'react-bootstrap/Table'
-import { Document } from '../../../../../redux/documentsSlice';
+import { Document } from '@redux/documentsSlice';
 
 interface Props {
     documents: Document[]

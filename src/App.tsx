@@ -1,13 +1,13 @@
 import './App.scss';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from 'react'
-import Spinner from './components/Spinner/Spinner';
-import AppHeader from './components/appHeader/AppHeader';
-import AppFooter from './components/appFooter/AppFooter';
-import MainPage from './components/pages/MainPage/MainPage';
-import ProfilePage from './components/pages/ProfilePage/ProfilePage';
-import LoginPage from './components/pages/LoginPage/LoginPage';
-const Page404 = lazy(() => import('./components/pages/Page404/Page404'))
+import Spinner from '@components/Spinner/Spinner';
+import AppHeader from '@components/appHeader/AppHeader';
+import AppFooter from '@components/appFooter/AppFooter';
+import MainPage from '@components/pages/MainPage/MainPage';
+import ProfilePage from '@components/pages/ProfilePage/ProfilePage';
+import LoginPage from '@components/pages/LoginPage/LoginPage';
+const Page404 = lazy(() => import('@components/pages/Page404/Page404'))
 
 function App() {
   return (

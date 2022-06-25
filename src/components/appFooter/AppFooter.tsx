@@ -1,6 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import './appFooter.scss';
-import sprite from '../../assets/sprite.svg';
+import sprite from '@assets/sprite.svg';
 
 
 const AppHeader = () => {

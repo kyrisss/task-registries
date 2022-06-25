@@ -1,13 +1,13 @@
 import './tabContainer.scss'
-import sprite from '../../../../assets/sprite.svg'
+import sprite from '@assets/sprite.svg'
 import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
 import Row from 'react-bootstrap/Row';
 import Tab from 'react-bootstrap/Tab';
 import ProfileSettings from './../ProfileSettings/ProfileSettings';
 import { useDispatch } from 'react-redux';
-import { AppDispatch } from '../../../../redux/store';
-import { setLogin } from '../../../../redux/loginSlice';
+import { AppDispatch } from '@redux/store';
+import { setLogin } from '@redux/loginSlice';
 import { useNavigate } from 'react-router-dom';
 
 

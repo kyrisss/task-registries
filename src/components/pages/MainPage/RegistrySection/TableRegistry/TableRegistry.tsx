@@ -1,9 +1,9 @@
 import './tableRegistry.scss';
-import sprite from '../../../../../assets/sprite.svg'
+import sprite from '@assets/sprite.svg'
 import Table from 'react-bootstrap/Table'
-import { Registry, setSortKey, setSortType } from '../../../../../redux/registrySlice';
+import { Registry, setSortKey, setSortType } from '@redux/registrySlice';
 import { useDispatch, useSelector } from 'react-redux';
-import { AppDispatch, RootState } from '../../../../../redux/store';
+import { AppDispatch, RootState } from '@redux/store';
 
 interface Props {
     registry: Registry[]

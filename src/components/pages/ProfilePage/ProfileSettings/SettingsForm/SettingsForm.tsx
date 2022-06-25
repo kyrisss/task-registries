@@ -2,10 +2,10 @@ import { useFormik } from 'formik'
 import { useState } from 'react'
 import * as Yup from 'yup'
 import './settingsForm.scss'
-import sprite from '../../../../../assets/sprite.svg'
+import sprite from '@assets/sprite.svg'
 import { useDispatch, useSelector } from 'react-redux';
-import { AppDispatch, RootState } from '../../../../../redux/store'
-import { setProfile } from '../../../../../redux/profileSlice'
+import { AppDispatch, RootState } from '@redux/store'
+import { setProfile } from '@redux/profileSlice'
 
 const Form = () => {
     const [showPassword, setShowpassword] = useState<Boolean>(false)

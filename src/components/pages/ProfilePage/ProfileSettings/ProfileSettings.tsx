@@ -1,8 +1,8 @@
 import './profileSettings.scss';
-import avatar from '../../../../assets/user.png';
+import avatar from '@assets/user.png';
 import SettingsForm from './SettingsForm/SettingsForm';
 import { useSelector } from 'react-redux';
-import { RootState } from '../../../../redux/store';
+import { RootState } from '@redux/store';
 
 
 

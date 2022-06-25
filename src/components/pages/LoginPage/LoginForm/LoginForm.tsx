@@ -1,10 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { AppDispatch, RootState } from '../../../../redux/store';
+import { AppDispatch, RootState } from '@redux/store';
 import { useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import './loginForm.scss';
-import { setLogin } from '../../../../redux/loginSlice';
+import { setLogin } from '@redux/loginSlice';
 
 
 const LoginForm = () => {
@@ -14,13 +14,6 @@ const LoginForm = () => {
 
     const navigate = useNavigate()
 
-    // const toggleShowPassword = () => {
-    //     if (showPassword == false) {
-    //         setShowpassword(true)
-    //     } else {
-    //         setShowpassword(false)
-    //     }
-    // }
 
     const formik = useFormik({
         initialValues: {

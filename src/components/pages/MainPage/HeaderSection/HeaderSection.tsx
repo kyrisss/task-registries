@@ -1,9 +1,9 @@
 import './headerSection.scss';
-import img from '../../../../assets/office.png'
-import sprite from '../../../../assets/sprite.svg'
+import img from '@assets/office.png'
+import sprite from '@assets/sprite.svg'
 import { useDispatch } from 'react-redux';
-import { AppDispatch } from '../../../../redux/store';
-import { setSearch } from '../../../../redux/registrySlice';
+import { AppDispatch } from '@redux/store';
+import { setSearch } from '@redux/registrySlice';
 
 const HeaderSection = () => {
 

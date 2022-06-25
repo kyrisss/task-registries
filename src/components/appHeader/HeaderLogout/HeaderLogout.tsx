@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
-// import './headerProfile.scss';
-import sprite from '../../../assets/sprite.svg';
+import sprite from '@assets/sprite.svg';
 
 
 const HeaderLogout = () => {

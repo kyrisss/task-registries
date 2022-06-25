@@ -1,6 +1,6 @@
 import LoginForm from './LoginForm/LoginForm';
 import './loginPage.scss';
-import sprite from '../../../assets/sprite.svg'
+import sprite from '@assets/sprite.svg'
 import { Link } from 'react-router-dom';
 
 
